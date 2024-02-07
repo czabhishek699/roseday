@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Size Animation</title>
+<style>
+#myImage {
+  width: 1%;
+  transition: width 9s;
+  margin-left: 27%;
+  opacity: 0;
+  margin-bottom:10%;
+}
+
+.avishek-text {
+  opacity: 0;
+  transition: opacity 3s ease-in;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 20px;
+  font-weight:bold;
+  color:red;
+  
+}
+  .watermark{
+    font-family:arial;
+    opacity:0.5;
+  }
+  body{
+    
+       background-image: url('bg.jpg');
+    background-size: cover; /* Adjusts the background image size to cover the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    /* Optionally, you can add other styles for the body */
+  }
+</style>
+
+</style>
+</head>
+<body>
+  <body style="background-color:pink;"></body>
+<img id="myImage" src="rose.png" alt="Your Image">
+<p class="avishek-text">Happy Rose Day<span>&#127801;</span></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p class="watermark">Developed By <a href="https://facebook.com/rbabhishek10">Abhi Shek</a></p>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const image = document.getElementById("myImage");
+  const text = document.querySelector(".avishek-text");
+
+  // Text animation (fade in)
+  setTimeout(function() {
+    text.style.opacity = "1";
+  }, 1100); // Delay in milliseconds before text starts fading in
+
+  // Image animation (size increase)
+  setTimeout(function() {
+    image.style.width = "50%";
+    image.style.opacity = "1";
+  }, 1100); // Delay in milliseconds before image starts resizing and fading in
+});
+</script>
+</body>
+</html>
